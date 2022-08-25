@@ -1,0 +1,64 @@
+body{
+    color: #333333;
+    font-family: sans-serif;
+}
+
+#main{
+    background-color: #EEEEEE;
+    border-radius: 5px;
+}
+
+#title{
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+}
+
+p{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+#img-div{
+    background-color: #ffffff;
+    padding: 10px;
+}
+
+#image{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+img:hover{
+    box-shadow:5px 5px  #333333;
+}
+
+#img-caption{
+    text-align: center;
+}
+li{
+    display: list-item;
+    line-height: 2.5rem;
+}
+ul{
+    display: table;
+    margin: 0 auto;
+}
+
+#tribute-link-sec{
+    padding-top: 1rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+blockquote{
+ font-weight: 100;
+ color: gray;   
+}
+
+h3{
+    text-align: center;
+}

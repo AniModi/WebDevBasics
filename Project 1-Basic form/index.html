@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      This form is created to gather your personal information
+    </p>
+    <form id="survey-form">
+      <fieldset class="one">
+        <label id="name-label"
+          >Enter Your Name:
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </label>
+        <label id="email-label"
+          >Enter Your Email:
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </label>
+        <label id="number-label"
+          >Enter Your Age:
+          <input
+            type="number"
+            id="number"
+            name="age"
+            min="13"
+            max="120"
+            placeholder="Enter your age"
+            required
+          />
+        </label>
+        <label
+          >Gender:<br />
+          <select id="dropdown" name="select" required>
+            <option>---Select Gender---</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset class="two">
+        <label class="edu-lab"
+          ><p id="heading">Highest Educational Qualification:</p>
+          <label
+            ><p>High School</p>
+            <input type="radio" name="edu" value="High School"
+          /></label>
+          <label
+            ><p>Under Graduate</p>
+            <input type="radio" name="edu" value="Under Graduate"
+          /></label>
+          <label
+            ><p>Graduate</p>
+            <input type="radio" name="edu" value="Graduate"
+          /></label>
+          <label
+            ><p>Post Graduate</p>
+            <input type="radio" name="edu" value="Post Graduate"
+          /></label>
+        </label>
+        <label class="lang-lab"
+          ><p id="heading">Languages you speak</p>
+          <label
+            ><p>English</p>
+            <input type="checkbox" name="lang" value="English"
+          /></label>
+          <label
+            ><p>Hindi</p>
+            <input type="checkbox" name="lang" value="Hindi"
+          /></label>
+          <label
+            ><p>French</p>
+            <input type="checkbox" name="lang" value="French"
+          /></label>
+          <label
+            ><p>Spanish</p>
+            <input type="checkbox" name="lang" value="Spanish"
+          /></label>
+        </label>
+        <label
+          ><p id="desc">Describe yourself</p>
+          <textarea name="about" rows="3" cols="10" placeholder="I am XYZ, I like..."></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <input type="submit" name="submit" value="Submit" id="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>

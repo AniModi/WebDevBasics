@@ -1,0 +1,125 @@
+body {
+  background-color: #12998e;
+  padding: 0;
+  margin: 0;
+}
+#header {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #dea41d;
+  margin-bottom: 1rem;
+}
+#history{
+  margin: 0;
+  padding: 10px;
+  /* background-color: #a9c25d; */
+  cursor: pointer;
+}
+#history:hover{
+  background-color: #fcde67;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+ol{
+  display: none;
+}
+
+#display{
+  background: #01a2dd;
+  padding: 20px;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+.calculator {
+  grid-column: 2 / span 1;
+  background: #5bccf6;
+  /* padding: 10px; */
+}
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(1fr, 5);
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 20px;
+  /* padding-top: 0; */
+}
+#calc-screen {
+  text-align: right;
+  display: block;
+  height: 70px;
+  width: 33vw;
+  font-size: 50px;
+  background-color: rgb(216 212 212);
+  font-family: "Orbitron", sans-serif;
+}
+.num,
+.ops,
+.func {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a9c25d;
+  width: 7vw;
+  height: 12vh;
+  margin: auto;
+}
+button {
+  background: #ededed;
+  border: 1px solid #ccc;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* button {
+  position:relative;
+  width: auto;
+  color:#ecf0f1;
+  text-decoration:none;
+  border-radius:5px;
+  border:solid 1px #f39c12;
+  background:#e67e22;
+  text-align:center;
+  padding:16px 18px 14px;
+
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  transition: all 0.1s;
+
+  -webkit-box-shadow: 0px 6px 0px #d35400;
+  -moz-box-shadow: 0px 6px 0px #d35400;
+  box-shadow: 0px 6px 0px #d35400;
+} */
+button:active {
+  background: #e5e5e5;
+  -webkit-box-shadow: inset 1px 2px 5px #777;
+  -moz-box-shadow: inset 1px 2px 5px #777;
+  box-shadow: inset 1px 2px 5px #777;
+  outline: none;
+}
+/* 
+button:active{
+  -webkit-box-shadow: 0px 2px 0px #d35400;
+  -moz-box-shadow: 0px 2px 0px #d35400;
+  box-shadow: 0px 2px 0px #d35400;
+  position:relative;
+  top:4px;
+} */
+button:nth-last-child(-n + 4) {
+  margin-bottom: 10px;
+}
+
+.plus {
+  grid-row: auto/span 2;
+  height: 25vh;
+}

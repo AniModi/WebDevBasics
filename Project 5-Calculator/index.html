@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <nav id="nav-bar">
+        <ul>
+          <li>
+            <p id="history">View History</p>
+            <ol>
+              <li>45689</li>
+            </ol>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <!-- <div></div> -->
+      <div class="calculator">
+        <div id="display">
+          <form action="#" onsubmit="printResult()" id="screen">
+            <input type="text" name="" id="calc-screen" />
+          </form>
+        </div>
+        <div class="buttons">
+          <button class="func clr-all" onclick="clearScr()">AC</button>
+          <button class="func clr-scr" onclick="clearScr()">CE</button>
+          <button class="func backspace" onclick="deleteVal(this)">Del</button>
+          <button class="ops minus" onclick="printVal(this)">-</button>
+          <button class="num 7" onclick="printVal(this)">7</button>
+          <button class="num 8" onclick="printVal(this)">8</button>
+          <button class="num 9" onclick="printVal(this)">9</button>
+          <button class="ops divide" onclick="printVal(this)">/</button>
+          <button class="num 4" onclick="printVal(this)">4</button>
+          <button class="num 5" onclick="printVal(this)">5</button>
+          <button class="num 6" onclick="printVal(this)">6</button>
+          <button class="ops mult" onclick="printVal(this)">*</button>
+          <button class="num 1" onclick="printVal(this)">1</button>
+          <button class="num 2" onclick="printVal(this)">2</button>
+          <button class="num 3" onclick="printVal(this)">3</button>
+          <button class="ops plus" onclick="printVal(this)">+</button>
+          <button class="num 0" onclick="printVal(this)">0</button>
+          <button class="num dec" onclick="printVal(this)">.</button>
+          <button class="ops equals" onclick="printResult()">=</button>
+        </div>
+      </div>
+      <!-- <div></div> -->
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
