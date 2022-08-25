@@ -1,0 +1,67 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header{
+    text-align: center;
+}
+
+.size{
+    width: 750px;
+    height: 600px;
+    background-color: yellow;
+    margin: auto;
+}
+
+.intro-page{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: yellow;
+}
+.intro-title{
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: auto;
+    grid-row:2;
+}
+.play{
+    margin: auto;
+    grid-row: 3;
+    height: 50px;
+    width: 100px;
+}
+
+.choice-menu{
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.choice p{
+    height: 125px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+}
+
+.game-page{
+    display: none;
+    grid-template-columns: 500px 1fr;
+}
+canvas{
+    height: 500px;
+    width: 300px;
+    background-color: grey;
+    justify-self: center;
+    align-self: center;
+}
+.country{
+    display: grid;
+}

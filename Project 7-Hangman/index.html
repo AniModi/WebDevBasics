@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Hangman</title>
 </head>
 <body>
-    
+    <header>
+        <h1 class="title">Hangman by AniModi</h1>
+    </header>
+    <div class="intro-page size">
+        <h2 class="intro-title">
+            Hangman
+        </h2>
+        <button class="play" onclick="play()">PLAY</button>
+    </div>
+    <div class="choice-menu size">
+        <div class="choice" onclick="choice(this)"><p>Country</p></div>
+        <div class="choice" onclick="choice(this)"><p>Animals</p></div>
+        <div class="choice" onclick="choice(this)"><p>Presidents</p></div>
+        <div class="choice" onclick="choice(this)"><p>Random from above</p></div>
+    </div>
+    <div class="game-page">
+            <canvas>
+            </canvas>
+        <div class="country size">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
