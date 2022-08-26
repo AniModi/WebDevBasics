@@ -3,65 +3,115 @@ body {
   margin: 0;
 }
 
-header{
-    text-align: center;
+header {
+  text-align: center;
 }
 
-.size{
-    width: 750px;
-    height: 600px;
-    background-color: yellow;
-    margin: auto;
+.size {
+  width: 750px;
+  height: 600px;
+  background-color: yellow;
+  margin: auto;
 }
 
-.intro-page{
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    background-color: yellow;
+.intro-page {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  background-color: yellow;
 }
-.intro-title{
-    font-size: 3em;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: auto;
-    grid-row:2;
+.intro-title {
+  font-size: 3em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: auto;
+  grid-row: 2;
 }
-.play{
-    margin: auto;
-    grid-row: 3;
-    height: 50px;
-    width: 100px;
-}
-
-.choice-menu{
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
+.play {
+  margin: auto;
+  grid-row: 3;
+  height: 50px;
+  width: 100px;
 }
 
-.choice p{
-    height: 125px;
-    width: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: aqua;
+.choice-menu {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
-.game-page{
-    display: none;
-    grid-template-columns: 500px 1fr;
+.choice p {
+  height: 125px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
 }
-canvas{
-    height: 500px;
-    width: 300px;
-    background-color: grey;
-    justify-self: center;
-    align-self: center;
+
+.game-page {
+  display: none;
+  grid-template-columns: 500px 1fr;
 }
-.country{
-    display: grid;
+canvas {
+  height: 500px;
+  width: 300px;
+  background-color: grey;
+  justify-self: center;
+  align-self: center;
+}
+/* .country {
+  display: none;
+} */
+.game {
+  display: none;
+}
+/* .presidents {
+  display: none;
+}
+.random {
+  display: none;
+} */
+
+.words {
+  justify-content: center;
+  grid-template-columns: repeat(10, 50px);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+.hint {
+  grid-column: span 10;
+  justify-self: center;
+  align-self: center;
+  font-size: 2em;
+}
+
+.alphabets {
+  grid-column: span 10;
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: repeat(13, 50px);
+  /* column-gap: 12px; */
+  grid-template-rows: 1fr 1fr;
+  justify-self: center;
+  align-self: center;
+}
+.characters {
+  padding: 10px 0;
+  font-size: 30px;
+  text-align: center;
+}
+
+.characters:hover{
+    background-color: rgb(255, 255, 137);
+}
+
+.letters {
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-bottom: 3px solid black;
 }
