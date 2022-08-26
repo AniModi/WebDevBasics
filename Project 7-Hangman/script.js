@@ -19,7 +19,7 @@ function randomQuestion(ch) {
     return setBoard(i, ch);
   } else {
     let i = Math.floor(Math.random() * 3);
-    i == 0
+    return i == 0
       ? randomQuestion("Country")
       : i == 1
       ? randomQuestion("Animals")
