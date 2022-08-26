@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Hangman by AniModi</h1>
+    </header>
+    <div class="intro-page size">
+        <h2 class="intro-title">
+            Hangman
+        </h2>
+        <button class="play" onclick="play()">PLAY</button>
+    </div>
+    <div class="choice-menu size">
+        <div class="choice" onclick="choice(this)"><p>Country</p></div>
+        <div class="choice" onclick="choice(this)"><p>Animals</p></div>
+        <div class="choice" onclick="choice(this)"><p>Presidents</p></div>
+        <div class="choice" onclick="choice(this)"><p>Random from above</p></div>
+    </div>
+    <div class="game-page">
+            <canvas>
+            </canvas>
+        <div class="game size words">
+            <div class="letters" id="letter_1"></div>
+            <div class="letters" id="letter_2"></div>
+            <div class="letters" id="letter_3"></div>
+            <div class="letters" id="letter_4"></div>
+            <div class="letters" id="letter_5"></div>
+            <div class="letters" id="letter_6"></div>
+            <div class="letters" id="letter_7"></div>
+            <div class="letters" id="letter_8"></div>
+            <div class="letters" id="letter_9"></div>
+            <div class="letters" id="letter_10"></div>
+            <div class="letters" id="letter_11"></div>
+            <div class="letters" id="letter_12"></div>
+            <div class="letters" id="letter_13"></div>
+            <div class="letters" id="letter_14"></div>
+            <div class="letters" id="letter_15"></div>
+            <div class="letters" id="letter_16"></div>
+            <div class="letters" id="letter_17"></div>
+            <div class="letters" id="letter_18"></div>
+            <div class="letters" id="letter_19"></div>
+            <div class="letters" id="letter_20"></div>
+            <div class="hint"></div>
+            <div class="alphabets">
+                <div class="characters" id="a" onclick="letterClick(this)">A</div>
+                <div class="characters" id="b" onclick="letterClick(this)">B</div>
+                <div class="characters" id="c" onclick="letterClick(this)">C</div>
+                <div class="characters" id="d" onclick="letterClick(this)">D</div>
+                <div class="characters" id="e" onclick="letterClick(this)">E</div>
+                <div class="characters" id="f" onclick="letterClick(this)">F</div>
+                <div class="characters" id="g" onclick="letterClick(this)">G</div>
+                <div class="characters" id="h" onclick="letterClick(this)">H</div>
+                <div class="characters" id="i" onclick="letterClick(this)">I</div>
+                <div class="characters" id="j" onclick="letterClick(this)">J</div>
+                <div class="characters" id="k" onclick="letterClick(this)">K</div>
+                <div class="characters" id="l" onclick="letterClick(this)">L</div>
+                <div class="characters" id="m" onclick="letterClick(this)">M</div>
+                <div class="characters" id="n" onclick="letterClick(this)">N</div>
+                <div class="characters" id="o" onclick="letterClick(this)">O</div>
+                <div class="characters" id="p" onclick="letterClick(this)">P</div>
+                <div class="characters" id="q" onclick="letterClick(this)">Q</div>
+                <div class="characters" id="r" onclick="letterClick(this)">R</div>
+                <div class="characters" id="s" onclick="letterClick(this)">S</div>
+                <div class="characters" id="t" onclick="letterClick(this)">T</div>
+                <div class="characters" id="u" onclick="letterClick(this)">U</div>
+                <div class="characters" id="v" onclick="letterClick(this)">V</div>
+                <div class="characters" id="w" onclick="letterClick(this)">W</div>
+                <div class="characters" id="x" onclick="letterClick(this)">X</div>
+                <div class="characters" id="y" onclick="letterClick(this)">Y</div>
+                <div class="characters" id="z" onclick="letterClick(this)">Z</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="questions.js"></script>
+</body>
+</html>
