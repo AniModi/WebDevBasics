@@ -128,10 +128,11 @@ canvas {
   padding: 10px 0;
   font-size: 30px;
   text-align: center;
+  cursor: pointer;
 }
 
 .characters:hover {
-  background-color: rgb(255, 255, 137);
+  background-color: rgb(255, 255, 255);
 }
 
 .letters {
