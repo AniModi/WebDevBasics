@@ -84,6 +84,7 @@ function setBoard(ind, ch) {
 function drawHangman(i) {
   let canvas = document.querySelector("canvas");
   let ctx = canvas.getContext("2d");
+  ctx.lineWidth=2;
   //Drawing board
   if (i == 0) {
     ctx.beginPath();

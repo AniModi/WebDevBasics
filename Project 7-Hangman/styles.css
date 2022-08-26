@@ -1,6 +1,10 @@
 body {
   padding: 0;
   margin: 0;
+  /* background-color: #142850; */
+  background: rgb(20,40,80);
+background: linear-gradient(159deg, rgba(20,40,80,1) 0%, rgba(37,77,113,1) 61%, rgba(0,168,204,1) 100%);
+  color: white;
 }
 
 header {
@@ -10,14 +14,14 @@ header {
 .size {
   width: 750px;
   height: 600px;
-  background-color: yellow;
+  background-color: #cbe9f0;
   margin: auto;
+  color: black;
 }
 
 .intro-page {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  background-color: yellow;
 }
 .intro-title {
   font-size: 3em;
@@ -30,8 +34,23 @@ header {
   grid-row: 3;
   height: 50px;
   width: 100px;
+  border: 1px;
+  border-radius: 20px;
+  font-weight: bolder;
+  /* background-color: ; */
+  background: linear-gradient(
+    90deg,
+    rgba(17, 45, 78, 1) 0%,
+    rgba(219, 226, 239, 1) 35%,
+    rgba(63, 114, 175, 1) 78%
+  );
+  cursor: pointer;
 }
 
+.play:hover,.choice p:hover {
+  /* background-color: grey; */
+  opacity: 0.5;
+}
 .choice-menu {
   display: none;
   grid-template-columns: 1fr 1fr;
@@ -48,7 +67,11 @@ header {
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: aqua;
+  background-color: #0C7B93;
+  border-radius: 20px;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
 }
 
 .game-page {
@@ -58,7 +81,7 @@ header {
 canvas {
   height: 500px;
   width: 300px;
-  background-color: grey;
+  background-color: rgb(255,255,255);
   justify-self: center;
   align-self: center;
 }
@@ -104,8 +127,8 @@ canvas {
   text-align: center;
 }
 
-.characters:hover{
-    background-color: rgb(255, 255, 137);
+.characters:hover {
+  background-color: rgb(255, 255, 137);
 }
 
 .letters {
