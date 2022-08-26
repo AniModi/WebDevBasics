@@ -97,37 +97,38 @@ function drawHangman(i) {
     ctx.rect(125, 58, 1, 10);
     ctx.stroke();
   }
-  if (i == 1) {
+  else if (i == 1) {
     //Drawing head
     ctx.beginPath();
     ctx.arc(125, 78, 7, 0, 2 * Math.PI);
     ctx.stroke();
   }
-  if (i == 2) {
+  else if (i == 2) {
     //Drawing torso
     ctx.beginPath();
     ctx.rect(125, 87, 1, 20);
     ctx.stroke();
   }
-  if (i == 3) {
+  else if (i == 3) {
     //Drawing hands
     ctx.beginPath();
     ctx.rect(100, 90, 50, 1);
     ctx.stroke();
   }
-  if (i == 4) {
+  else if (i == 4) {
     //Drawing Leg 1
     ctx.rotate(Math.PI / 6);
     ctx.beginPath();
     ctx.rect(160, 31, 1, 15);
     ctx.stroke();
   } //Drawing Leg 2
-  if (i == 5) {
+  else{
     ctx.rotate(-Math.PI / 3);
     ctx.beginPath();
     ctx.rect(56, 157, 1, 15);
     ctx.stroke();
-  } if(i>=5) return -1;
+    return -1;
+  } 
 }
 
 function letterClick(btn){
@@ -151,7 +152,7 @@ function letterClick(btn){
   console.log(q)
   if(len===q.replace(/ /g,'').length)alert("You WON")
   if (a) lives++;
-  if (drawHangman(lives) === -1) {
+  if (drawHangman(lives) == -1) {
     alert("Game Over");
   }
 }
