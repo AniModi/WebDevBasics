@@ -1,4 +1,6 @@
-html{height: 100%;}
+html {
+  height: 100%;
+}
 
 body {
   padding: 0;
@@ -10,10 +12,12 @@ body {
     rgba(20, 40, 80, 1) 0%,
     rgba(37, 77, 113, 1) 61%,
     rgba(0, 168, 204, 1) 100%
-  );
-  background-repeat: no-repeat;
+  ) no-repeat center fixed;
   color: white;
+  background-size: cover;
 }
+
+
 header {
   text-align: center;
 }
@@ -170,7 +174,7 @@ canvas {
   color: red;
 }
 
-.won{
+.won {
   text-align: center;
   grid-row: 2;
   margin: auto;
@@ -219,19 +223,22 @@ canvas {
   cursor: pointer;
 }
 
-#footer{
+#footer {
   display: flex;
   justify-content: flex-end;
   margin: 0;
+  position: fixed;
+  right: 0;
+  bottom: 1em;
 }
 
-#footer ul{
+#footer ul {
   list-style-type: none;
   margin: 0;
   margin-top: 1em;
   font-size: 0.9em;
 }
-#footer li{
+#footer li {
   margin: 0;
   margin-top: 0.5em;
   margin-right: 1em;
