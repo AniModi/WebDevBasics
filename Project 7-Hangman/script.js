@@ -4,6 +4,8 @@ let len=0;
 function play() {
   document.querySelector(".intro-page").style.display = "none";
   document.querySelector(".choice-menu").style.display = "grid";
+  document.querySelector(".game-over").style.display = "none";
+  document.querySelector(".game-won").style.display = "none";
 }
 
 function randomQuestion(ch) {
@@ -29,6 +31,21 @@ function randomQuestion(ch) {
 
 function setHint(h) {
   document.querySelector(".hint").textContent = h;
+}
+
+function gameOver(){
+  document.querySelector(".game-page").style.display = "none";
+  document.querySelector(".game-over").style.display = "grid";
+}
+
+function gameWon(){
+  document.querySelector(".game-page").style.display = "none";
+  document.querySelector(".game-won").style.display = "grid";
+}
+
+
+function exit(){
+  window.close()
 }
 
 function setBoard(ind, ch) {
@@ -127,7 +144,6 @@ function drawHangman(i) {
     ctx.beginPath();
     ctx.rect(56, 157, 1, 15);
     ctx.stroke();
-    return -1;
   } 
 }
 
@@ -150,10 +166,13 @@ function letterClick(btn){
     }
   }
   console.log(q)
-  if(len===q.replace(/ /g,'').length)alert("You WON")
+  if(len===q.replace(/ /g,'').length){
+    setTimeout(gameWon,300);
+  }
   if (a) lives++;
-  if (drawHangman(lives) == -1) {
-    alert("Game Over");
+  drawHangman(lives)
+  if (lives >= 5) {
+    setTimeout(gameOver,300);
   }
 }
 
@@ -162,7 +181,6 @@ function choice(chosen) {
   document.querySelector(".choice-menu").style.display = "none";
   document.querySelector(".game-page").style.display = "grid";
   drawHangman(0);
-  document.querySelector(".game").style.display = "grid";
   if (ch === "Country") {
     arr = randomQuestion(ch);
   } else if (ch === "Animals") {

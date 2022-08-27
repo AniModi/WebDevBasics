@@ -15,13 +15,14 @@
         <h2 class="intro-title">
             Hangman
         </h2>
-        <button class="play" onclick="play()">PLAY</button>
+        <button class="play hov" onclick="play()">PLAY</button>
+        <button class="exit hov" onclick="exit()">EXIT</button>
     </div>
     <div class="choice-menu size">
-        <div class="choice" onclick="choice(this)"><p>Country</p></div>
-        <div class="choice" onclick="choice(this)"><p>Animals</p></div>
-        <div class="choice" onclick="choice(this)"><p>Presidents</p></div>
-        <div class="choice" onclick="choice(this)"><p>Random from above</p></div>
+        <div class="choice hov" onclick="choice(this)"><p>Country</p></div>
+        <div class="choice hov" onclick="choice(this)"><p>Animals</p></div>
+        <div class="choice hov" onclick="choice(this)"><p>Presidents</p></div>
+        <div class="choice hov" onclick="choice(this)"><p>Random from above</p></div>
     </div>
     <div class="game-page">
             <canvas>
@@ -78,6 +79,23 @@
             </div>
         </div>
     </div>
+    <div class="game-over size">
+        <h2 class="gover">Game Over</h2>
+        <button class="again hov" onclick="play()">PLAY AGAIN</button>
+        <button class="exit hov" onclick="exit()">EXIT</button>
+    </div>
+    <div class="game-won size">
+        <h2 class="won">You Won</h2>
+        <button class="again hov" onclick="play()">PLAY AGAIN</button>
+        <button class="exit hov" onclick="exit()">EXIT</button>
+    </div>
+
+    <footer id="footer">
+        <ul>
+            <li>Made with love</li>
+            <li><a href="https://github.com/AniModi/WebDevBasics/tree/main/Project%207-Hangman">GitHub</a></li>
+        </ul>
+    </footer>
     <script src="script.js"></script>
     <script src="questions.js"></script>
 </body>
