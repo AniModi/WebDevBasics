@@ -1,11 +1,24 @@
 let lives = 0;
 let arr = [];
 let len=0;
-function play() {
+function play(){
   document.querySelector(".intro-page").style.display = "none";
   document.querySelector(".choice-menu").style.display = "grid";
   document.querySelector(".game-over").style.display = "none";
   document.querySelector(".game-won").style.display = "none";
+  let letters = document.querySelectorAll(".letters");
+  for(let i=0;i<20;i++){
+    letters[i].style.borderBottom = "3px solid black";
+    letters[i].textContent='';
+  }
+  let btn = document.querySelectorAll('.characters');
+  for(let i=0;i<26;i++){
+    btn[i].style.textDecoration='none';
+  }
+  let canvas = document.querySelector("canvas");
+  let ctx = canvas.getContext("2d");
+  lives=0;
+  len=0;
 }
 
 function randomQuestion(ch) {
@@ -14,7 +27,6 @@ function randomQuestion(ch) {
     return setBoard(i, ch);
   } else if (ch === "Animals") {
     let i = Math.floor(Math.random() * (animals.length - 1));
-    console.log(animals[i]);
     return setBoard(i, ch);
   } else if (ch === "Presidents") {
     let i = Math.floor(Math.random() * (Presidents.length - 1));
@@ -82,7 +94,6 @@ function setBoard(ind, ch) {
   if (f !== -1) {
     for (let w = f; w < words.length; w++) {
       for (let c = 0; c < words[w].length; c++) {
-        answer[i] = w;
         i++;
       }
       letters[i].style.border = "none";
@@ -95,7 +106,7 @@ function setBoard(ind, ch) {
     letters[i].textContent = ' ';
   }
   setHint(h);
-  return [q, answer];
+  return q;
 }
 
 function drawHangman(i) {
@@ -105,6 +116,9 @@ function drawHangman(i) {
   //Drawing board
   if (i == 0) {
     ctx.beginPath();
+    ctx.resetTransform()
+    ctx.moveTo(0,0);
+    ctx.clearRect(0, 0, 500, 1000);
     ctx.rect(20, 50, 1, 100);
     ctx.stroke();
     ctx.beginPath();
@@ -151,8 +165,7 @@ function letterClick(btn){
   if(btn.style.textDecoration=='line-through')return;
   let c = btn.textContent;
   btn.style.textDecoration = 'line-through';
-  console.log(c);
-  let q = arr[0].toUpperCase();
+  let q = arr.toUpperCase();
   let a = true;
   let letters = document.querySelectorAll(".letters");
   let j=0;
@@ -160,12 +173,10 @@ function letterClick(btn){
     if(q[i]==' ' && letters[j].textContent==' ')j=9
     if (q[i] == c) {
       letters[j].textContent = c;
-      console.log(j+" "+i)
       len++;
       a = false;
     }
   }
-  console.log(q)
   if(len===q.replace(/ /g,'').length){
     setTimeout(gameWon,300);
   }
